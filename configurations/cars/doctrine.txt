@@ -1,0 +1,1 @@
+Write the rules for car refueling in gas station in case there is low fuel indication, meaning fuel level is less than 10

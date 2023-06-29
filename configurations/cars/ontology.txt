@@ -1,0 +1,18 @@
+Class: Car
+    Property: hasFuel
+    Property: canDrive
+    Property: needsRefuel
+    Property: refuelsAt GasStation
+
+Class: Fuel
+    Property: fuelLevel
+
+Class: GasStation
+    Property: isLocation
+
+Facts:
+Car canDrive only if Car hasFuel
+Car needsRefuel if Car gets low fuel indication
+Car refuelsAt GasStation
+Car need to drive to GasStation in order to refule
+

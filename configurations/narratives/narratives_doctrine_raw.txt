@@ -1,0 +1,13 @@
+Uri's narratives:
+
+Use case analysis
+The following are reference narratives representing general, realistic operational scenarios. To demonstrate system efficacy, UI evaluation and usability trials should demonstrate significantly quicker, wider and more accurate user understanding of an intelligence DB.
+1.1.    Narrative 01
+Motorcycles perform as messaging couriers and command distributes. They often start a round near the residence of a guerilla commander and then move quickly to deliver messages personally to operatives.
+Find motorcycles stopping many times along a route for short periods, with most stops being concurrent to another route stop or a person. For appropriate targets, find root and end address, then mark all routes with concurrent stops.
+1.2.    Narrative 02
+Many guerilla commanders only move around in fast moving, aggressive convoys. 
+Find convoys of 3 or more vehicles ending in either a KL or an uninhabited field larger than 100/100m. After finding, locate root and end of all vehicles in convoy.
+1.3.    Narrative 03 
+Planting IEDs and setting up rocket launchers are often done by small, self-sufficient work groups moving in trucks originating in a manufacturing facility and stopping in the designated area to plant and prepare the weapon for remote operation in advance. 
+Find small-medium trucks that originated from any KL and stopped for a significant time in an uninhabited area larger than 30/30m.  

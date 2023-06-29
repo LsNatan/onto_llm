@@ -1,0 +1,174 @@
+<http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#detection_of
+:detection_of rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#near
+:near rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#near_on_time
+:near_on_time rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#stops
+:stops rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#stops_on_time
+:stops_on_time rdf:type owl:ObjectProperty .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#Lat
+:Lat rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#Long
+:Long rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#anemity
+:anemity rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#color
+:color rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#end_time
+:end_time rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#is_marginal
+:is_marginal rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#is_part_of_convoy
+:is_part_of_convoy rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#name
+:name rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#num_of_dets
+:num_of_dets rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#serial_num
+:serial_num rdf:type owl:DatatypeProperty .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#start_time
+:start_time rdf:type owl:DatatypeProperty .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#Detection
+:Detection rdf:type owl:Class ;
+           owl:equivalentClass [ rdf:type owl:Restriction ;
+                                 owl:onProperty :detection_of ;
+                                 owl:someValuesFrom :Target
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :near ;
+                                 owl:someValuesFrom :POI
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :near_on_time ;
+                                 owl:someValuesFrom :Detection
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :stops ;
+                                 owl:someValuesFrom :POI
+                               ] ,
+                               [ rdf:type owl:Restriction ;
+                                 owl:onProperty :stops_on_time ;
+                                 owl:someValuesFrom :Detection
+                               ] ;
+           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                             owl:onProperty :Lat ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :Long ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:float
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :color ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :end_time ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :is_marginal ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:boolean
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :is_part_of_convoy ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:boolean
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :serial_num ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:int
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :start_time ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:dateTime
+                           ] .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#POI
+:POI rdf:type owl:Class ;
+     rdfs:subClassOf [ rdf:type owl:Restriction ;
+                       owl:onProperty :Lat ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:float
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :Long ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:float
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :anemity ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:string
+                     ] ,
+                     [ rdf:type owl:Restriction ;
+                       owl:onProperty :name ;
+                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                       owl:onDataRange xsd:string
+                     ] .
+
+
+###  http://www.semanticweb.org/adiel/ontologies/2023/5/untitled-ontology-75#Target
+:Target rdf:type owl:Class ;
+        rdfs:subClassOf [ rdf:type owl:Restriction ;
+                          owl:onProperty :num_of_dets ;
+                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                          owl:onDataRange xsd:int
+                        ] .
+

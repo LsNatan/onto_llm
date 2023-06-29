@@ -1,0 +1,7 @@
+[?d, is_marginal:is_marginal, "1"]:- [?d, detection_of:detection_of, ?t],[?d, serial_num:serial_num, ?n1],[?t, num_of_dets:num_of_dets, ?n2], FILTER(?n1=?n2),FILTER(?n2>1).
+[?d, is_marginal:is_marginal, "1"]:- [?d, detection_of:detection_of, ?t],[?d, serial_num:serial_num, ?n1],[?t, num_of_dets:num_of_dets, ?n2], FILTER(?n1=1),FILTER(?n2>1).
+%[?d1, is_part_of_convoy:is_part_of_convoy, "1"],[?d2, is_part_of_convoy:is_part_of_convoy, "1"]:-[?d1, near_on_time:near_on_time, ?d2],[?d1, near_on_time:near_on_time, ?d3],[?d1, is_marginal:is_marginal, "0"],[?d2, is_marginal:is_marginal, "0"],[?d3, is_marginal:is_marginal, "0"],FILTER(?d2!=?d3).
+[?d1, stop_on_time:stop_on_time, ?d2]:-[?d1, near_on_time:near_on_time, ?d2],[?d1, is_marginal:is_marginal, "1"],[?d2, is_marginal:is_marginal, "1"].
+[?d1, stops_near_poi:stops_near_poi, ?p]:-[?d1, near_poi:near_poi, ?p],[?d1, is_marginal:is_marginal, "1"].
+[?t, near_poi:near_poi, ?p]:- [?d, detection_of:detection_of, ?t],[?d, near_poi:near_poi, ?p].
+[?t, stops_near_poi:stops_near_poi, ?p]:- [?d, detection_of:detection_of, ?t],[?d, stops_near_poi:stops_near_poi, ?p].

@@ -1,0 +1,27 @@
+
+There are 3 classes with the following properties:
+
+:Detection serial_num:serial_num
+:Detection is_marginal:is_marginal
+:Detection is_part_of_convoy:is_part_of_convoy
+:Detection start_time:start_time
+:Detection stop_on_time:stop_on_time
+:Detection color:color
+:Detection lat:lat
+:Detection long:long
+
+
+:POI lat:lat
+:POI long:long
+:POI poi_name:poi_name
+:POI amenity:amenity
+
+:Target num_of_dets:num_of_dets
+
+Inter class relations:
+
+:Detection near_on_time:near_on_time :Detection
+:Detection stops_on_time:stops_on_time :Detection
+:Detection detection_of:detection_of :Target
+:Detection near_poi:near_poi :POI
+:Detection stops:stops :POI
